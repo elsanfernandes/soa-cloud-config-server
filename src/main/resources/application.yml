@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: CONFIG-SERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/elsanfernandes/soa-cloud-config-server
+          default-label: main
+
+server:
+  port: 9196
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone : http://192.168.0.149:8761/eureka/
+  instance:
+    hostname: 192.168.0.149
+    prefer-ip-address: true
